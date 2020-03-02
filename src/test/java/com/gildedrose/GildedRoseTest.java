@@ -89,7 +89,7 @@ public class GildedRoseTest {
 
 	@Test
 	public void conjuredItem() {
-		Item[] items = new Item[]{new Item("Conjured", 2, 30)};
+		Item[] items = new Item[]{new Conjured("Conjured", 2, 30)};
 		GildedRose app = new GildedRose(items);
 		app.updateQuality();
 		assertEquals("Conjured", app.items[0].name);
