@@ -44,7 +44,7 @@ public class GildedRoseTest {
 		app.updateQuality();
 		assertEquals("Sulfuras, Hand of Ragnaros", app.items[0].name);
 		assertEquals(80, app.items[0].quality);
-		assertEquals(-1,app.items[0].sellIn);
+		assertEquals(-1, app.items[0].sellIn);
 	}
 
 	@Test

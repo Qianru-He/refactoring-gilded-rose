@@ -3,17 +3,17 @@ package com.gildedrose;
 import java.util.Arrays;
 
 class GildedRose {
-    Item[] items;
+	Item[] items;
 
-    public GildedRose(Item[] items) {
-        this.items = items;
-    }
+	public GildedRose(Item[] items) {
+		this.items = items;
+	}
 
-    public void updateQuality() {
-        Arrays.stream(items).forEach(this::updateItem);
-    }
+	public void updateQuality() {
+		Arrays.stream(items).forEach(this::updateItem);
+	}
 
-    private void updateItem(Item item) {
-        item.update();
-    }
+	private void updateItem(Item item) {
+		item.update();
+	}
 }
