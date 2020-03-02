@@ -19,7 +19,7 @@ public class GildedRoseTest {
 
 	@Test
 	public void agedBrieQualityLessThan50() {
-		Item[] items = new Item[]{new Item("Aged Brie", 2, 0)};
+		Item[] items = new Item[]{new AgedBrie("Aged Brie", 2, 0)};
 		GildedRose app = new GildedRose(items);
 		app.updateQuality();
 		assertEquals("Aged Brie", app.items[0].name);
@@ -29,7 +29,7 @@ public class GildedRoseTest {
 
 	@Test
 	public void agedBrieSellInLessThan0() {
-		Item[] items = new Item[]{new Item("Aged Brie", -1, 1)};
+		Item[] items = new Item[]{new AgedBrie("Aged Brie", -1, 1)};
 		GildedRose app = new GildedRose(items);
 		app.updateQuality();
 		assertEquals("Aged Brie", app.items[0].name);
