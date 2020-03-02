@@ -39,7 +39,7 @@ public class GildedRoseTest {
 
 	@Test
 	public void Sulfuras() {
-		Item[] items = new Item[]{new Item("Sulfuras, Hand of Ragnaros", -1, 80)};
+		Item[] items = new Item[]{new Sulfuras("Sulfuras, Hand of Ragnaros", -1, 80)};
 		GildedRose app = new GildedRose(items);
 		app.updateQuality();
 		assertEquals("Sulfuras, Hand of Ragnaros", app.items[0].name);
