@@ -1,15 +1,17 @@
 package com.gildedrose;
 
 public class Conjured extends Item {
-	public Conjured(String name, int sellIn, int quality) {
-		super(name, sellIn, quality);
+	public Conjured(int sellIn, int quality) {
+		super("Conjured", sellIn, quality);
 	}
 
 	@Override
-	public void update() {
+	public void updateQualityAndSellIn() {
 		int temp = quality - 1;
 		quality = Math.max(temp, 0);
-		sellIn -= 1;
+
+		updateSellIn();
+
 		if (sellIn < 0) {
 			temp = quality - 1;
 			quality = Math.max(temp, 0);

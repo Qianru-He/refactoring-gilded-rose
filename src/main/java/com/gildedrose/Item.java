@@ -19,15 +19,29 @@ public class Item {
 		return this.name + ", " + this.sellIn + ", " + this.quality;
 	}
 
-	public void update() {
+	public void updateQualityAndSellIn() {
+		updateQuality();
+		updateSellIn();
+		if (isExpiration()) {
+			updateQualityAfterExpiration();
+		}
+	}
+
+	private void updateQualityAfterExpiration() {
 		if (quality > 0) {
-			quality = quality - 1;
+			quality -= 1;
 		}
-		sellIn = sellIn - 1;
-		if (sellIn < 0) {
-			if (quality > 0) {
-				quality = quality - 1;
-			}
-		}
+	}
+
+	private boolean isExpiration() {
+		return sellIn < 0;
+	}
+
+	protected void updateSellIn() {
+		sellIn -= 1;
+	}
+
+	private void updateQuality() {
+		updateQualityAfterExpiration();
 	}
 }

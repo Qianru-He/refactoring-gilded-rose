@@ -1,11 +1,11 @@
 package com.gildedrose;
 
 public class Sulfuras extends Item {
-	public Sulfuras(String name, int sellIn, int quality) {
-		super(name, sellIn, quality);
+	public Sulfuras(int sellIn, int quality) {
+		super("Sulfuras", sellIn, quality);
 	}
 
 	@Override
-	public void update() {
+	public void updateQualityAndSellIn() {
 	}
 }
