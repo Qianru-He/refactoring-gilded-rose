@@ -8,11 +8,11 @@ public class Conjured extends Item {
     @Override
     public void update() {
         int temp = quality - 1;
-        quality = temp >= 0 ? temp : 0;
+        quality = Math.max(temp, 0);
         sellIn = sellIn - 1;
         if (sellIn < 0) {
             temp = quality - 1;
-            quality = temp >= 0 ? temp : 0;
+            quality = Math.max(temp, 0);
         }
     }
 }
